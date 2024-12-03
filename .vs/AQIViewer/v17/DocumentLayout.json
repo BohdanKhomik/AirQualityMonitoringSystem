@@ -3,24 +3,56 @@
   "WorkspaceRootPath": "D:\\VS solutions\\AQIViewer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\locationpointscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\locationpointscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\models\\alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:models\\alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\models\\useralert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:models\\useralert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\airqualityrecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\airqualityrecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\userlocationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\userlocationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\models\\userlocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:models\\userlocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\useralertscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\useralertscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\pollutionrecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\pollutionrecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\pollutionlevelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\pollutionlevelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\pollutantlevelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\pollutantlevelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\pollutantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\pollutantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\forecastscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\forecastscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\aqrforecastscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\aqrforecastscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\alertscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\alertscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,64 +70,172 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADIAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-03T18:41:47.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PollutionLevelsController.cs",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\PollutionLevelsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PollutionLevelsController.cs",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\PollutionLevelsController.cs",
+              "RelativeToolTip": "Controllers\\PollutionLevelsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T11:28:55.772Z",
+              "WhenOpened": "2024-12-03T18:35:41.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PollutantLevelsController.cs",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\PollutantLevelsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PollutantLevelsController.cs",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\PollutantLevelsController.cs",
+              "RelativeToolTip": "Controllers\\PollutantLevelsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T18:34:58.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PollutantsController.cs",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\PollutantsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PollutantsController.cs",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\PollutantsController.cs",
+              "RelativeToolTip": "Controllers\\PollutantsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T18:34:27.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LocationPointsController.cs",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\LocationPointsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LocationPointsController.cs",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\LocationPointsController.cs",
+              "RelativeToolTip": "Controllers\\LocationPointsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T18:33:36.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserAlert.cs",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Models\\UserAlert.cs",
-              "RelativeDocumentMoniker": "Models\\UserAlert.cs",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\Models\\UserAlert.cs",
-              "RelativeToolTip": "Models\\UserAlert.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Title": "AirQualityRecordsController.cs",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\AirQualityRecordsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AirQualityRecordsController.cs",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\AirQualityRecordsController.cs",
+              "RelativeToolTip": "Controllers\\AirQualityRecordsController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T11:16:59.53Z"
+              "WhenOpened": "2024-12-03T18:24:38.752Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Alert.cs",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Models\\Alert.cs",
-              "RelativeDocumentMoniker": "Models\\Alert.cs",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\Models\\Alert.cs",
-              "RelativeToolTip": "Models\\Alert.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABSAAAA",
+              "DocumentIndex": 5,
+              "Title": "PollutionRecordsController.cs",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\PollutionRecordsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PollutionRecordsController.cs",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\PollutionRecordsController.cs",
+              "RelativeToolTip": "Controllers\\PollutionRecordsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T11:13:58.512Z"
+              "WhenOpened": "2024-12-03T18:36:34.24Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAtAAAA",
+              "Title": "UserLocationsController.cs",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\UserLocationsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserLocationsController.cs",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\UserLocationsController.cs",
+              "RelativeToolTip": "Controllers\\UserLocationsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T11:12:06.907Z"
+              "WhenOpened": "2024-12-03T18:37:54.309Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "UserLocation.cs",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Models\\UserLocation.cs",
-              "RelativeDocumentMoniker": "Models\\UserLocation.cs",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\Models\\UserLocation.cs",
-              "RelativeToolTip": "Models\\UserLocation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABQAAAA",
+              "Title": "UserAlertsController.cs",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\UserAlertsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserAlertsController.cs",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\UserAlertsController.cs",
+              "RelativeToolTip": "Controllers\\UserAlertsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T11:08:24.911Z"
+              "WhenOpened": "2024-12-03T18:37:14.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ForecastsController.cs",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\ForecastsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ForecastsController.cs",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\ForecastsController.cs",
+              "RelativeToolTip": "Controllers\\ForecastsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T18:33:02.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AQRForecastsController.cs",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\AQRForecastsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AQRForecastsController.cs",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\AQRForecastsController.cs",
+              "RelativeToolTip": "Controllers\\AQRForecastsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T18:32:29.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T18:27:15.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AlertsController.cs",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\AlertsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AlertsController.cs",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\AlertsController.cs",
+              "RelativeToolTip": "Controllers\\AlertsController.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAswDkAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T18:26:45.386Z",
+              "EditorCaption": ""
             }
           ]
         }

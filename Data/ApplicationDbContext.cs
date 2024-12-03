@@ -124,7 +124,7 @@ namespace AQIViewer.Data
               .HasForeignKey(ua => ua.AlertId)
               .IsRequired();
 
-            //    //builder.Entity<ApplicationUser>().ToTable("AspNetUsers");
+            builder.Entity<User>().ToTable("AspNetUsers");
 
             //    builder.Entity<ProjectUser>()
             //        .HasOne(pu => pu.Project)
@@ -137,6 +137,7 @@ namespace AQIViewer.Data
             //        .HasForeignKey(pu => pu.UserId);
 
         }
+        public DbSet<AQIViewer.Models.UserAlert> UserAlert { get; set; } = default!;
 
     }
 }

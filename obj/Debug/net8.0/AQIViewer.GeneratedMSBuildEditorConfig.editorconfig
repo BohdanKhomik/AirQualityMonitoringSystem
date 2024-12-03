@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AQIViewer
 build_property.RootNamespace = AQIViewer
@@ -22,12 +30,192 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/VS solutions/AQIViewer/Views/AirQualityRecords/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWlyUXVhbGl0eVJlY29yZHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/AirQualityRecords/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWlyUXVhbGl0eVJlY29yZHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/AirQualityRecords/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWlyUXVhbGl0eVJlY29yZHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/AirQualityRecords/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWlyUXVhbGl0eVJlY29yZHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/AirQualityRecords/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWlyUXVhbGl0eVJlY29yZHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Alerts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxlcnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Alerts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxlcnRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Alerts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxlcnRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Alerts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxlcnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Alerts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxlcnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/AQRForecasts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVFSRm9yZWNhc3RzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/AQRForecasts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVFSRm9yZWNhc3RzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/AQRForecasts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVFSRm9yZWNhc3RzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/AQRForecasts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVFSRm9yZWNhc3RzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/AQRForecasts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVFSRm9yZWNhc3RzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Forecasts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9yZWNhc3RzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Forecasts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9yZWNhc3RzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Forecasts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9yZWNhc3RzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Forecasts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9yZWNhc3RzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Forecasts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9yZWNhc3RzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/VS solutions/AQIViewer/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/VS solutions/AQIViewer/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/LocationPoints/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYXRpb25Qb2ludHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/LocationPoints/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYXRpb25Qb2ludHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/LocationPoints/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYXRpb25Qb2ludHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/LocationPoints/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYXRpb25Qb2ludHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/LocationPoints/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYXRpb25Qb2ludHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutantLevels/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50TGV2ZWxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutantLevels/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50TGV2ZWxzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutantLevels/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50TGV2ZWxzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutantLevels/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50TGV2ZWxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutantLevels/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50TGV2ZWxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Pollutants/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Pollutants/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Pollutants/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Pollutants/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/Pollutants/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutionLevels/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0aW9uTGV2ZWxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutionLevels/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0aW9uTGV2ZWxzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutionLevels/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0aW9uTGV2ZWxzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutionLevels/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0aW9uTGV2ZWxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutionLevels/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0aW9uTGV2ZWxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutionRecords/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0aW9uUmVjb3Jkc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutionRecords/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0aW9uUmVjb3Jkc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutionRecords/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0aW9uUmVjb3Jkc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutionRecords/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0aW9uUmVjb3Jkc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/PollutionRecords/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0aW9uUmVjb3Jkc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/VS solutions/AQIViewer/Views/Shared/Error.cshtml]
@@ -40,6 +228,46 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/VS solutions/AQIViewer/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/UserAlerts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFsZXJ0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/UserAlerts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFsZXJ0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/UserAlerts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFsZXJ0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/UserAlerts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFsZXJ0c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/UserAlerts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFsZXJ0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/UserLocations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckxvY2F0aW9uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/UserLocations/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckxvY2F0aW9uc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/UserLocations/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckxvY2F0aW9uc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/UserLocations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckxvY2F0aW9uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS solutions/AQIViewer/Views/UserLocations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckxvY2F0aW9uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/VS solutions/AQIViewer/Views/_ViewImports.cshtml]

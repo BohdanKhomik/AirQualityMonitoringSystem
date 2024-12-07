@@ -42,8 +42,7 @@
               "RelativeToolTip": "Controllers\\PollutantLevelsController.cs",
               "ViewState": "AQIAAJgAAAAAAAAAAAA+wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T11:08:20.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T11:08:20.474Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAiwBAAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T11:06:51.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T11:06:51.662Z"
             },
             {
               "$type": "Document",
@@ -66,7 +64,7 @@
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAkwEMAAAAJAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAAkwEYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T11:01:40.599Z",
               "EditorCaption": ""
@@ -79,7 +77,7 @@
               "RelativeDocumentMoniker": "Views\\Home\\AQICalculator.cshtml",
               "ToolTip": "D:\\VS solutions\\AQIViewer\\Views\\Home\\AQICalculator.cshtml",
               "RelativeToolTip": "Views\\Home\\AQICalculator.cshtml",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAuwGgAAAAAAAAA",
+              "ViewState": "AQIAAKcAAAAAAAAAAAAAALoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-05T18:32:34.561Z",
               "EditorCaption": ""

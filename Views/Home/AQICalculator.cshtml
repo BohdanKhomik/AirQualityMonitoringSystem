@@ -62,52 +62,51 @@
             {
                 <div class="container my-5">
                     <h1 class="text-center mb-4">AQI Calculator</h1>
-                            <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Select</th>
-                        <th>Pollutant</th>
-                        <th>Measure</th>
-                        <th>Description</th>
-                        <th>Enter Concentration</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var pollutant in Model)
-                    {
-                        <tr>
-                            <td>
-                                <input type="radio" name="pollutant" value="@pollutant.Id" required>
-                            </td>
-                            <td>@pollutant.Name</td>
-                            <td>@pollutant.Measure</td>
-                            <td>@pollutant.Description</td>
-                            <td>
-                                <input type="number" 
-                                       id="concentration_@pollutant.Id" 
-                                       class="form-control" 
-                                       placeholder="Enter value"
-                                       step="0.01" 
-                                       disabled>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Select</th>
+                                    <th>Pollutant</th>
+                                    <th>Measure</th>
+                                    <th>Description</th>
+                                    <th>Enter Concentration</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var pollutant in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            <input type="radio" name="pollutant" value="@pollutant.Id" required />
+                                        </td>
+                                        <td>@pollutant.Name</td>
+                                        <td>@pollutant.Measure</td>
+                                        <td>@pollutant.Description</td>
+                                        <td>
+                                            <input type="number"
+                                                   id="concentration_@pollutant.Id"
+                                                   class="form-control"
+                                                   placeholder="Enter value"
+                                                   step="0.01"
+                                                   disabled />
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="text-center mt-4">
                         <button type="submit" class="btn btn-primary btn-lg">
-                            <i class="fas fa-calculator"></i> Calculate AQICalculate AQI
+                            <i class="fas fa-calculator"></i> Calculate AQI
                         </button>
                     </div>
                     <div id="result" class="mt-4 text-center">
-                        <!-- AQI result will appear here -->
+                        <!-- AQI result will show here -->
                     </div>
                 </div>
             }
         </form>
-        <div id="result"></div>
     </div>
 
     <script>
@@ -115,7 +114,28 @@
             const form = document.getElementById("aqiForm");
             const resultContainer = document.getElementById("result");
 
-            // Handle button click event
+            // Handle enabling/disabling concentration inputs based on selection
+            document.querySelectorAll("input[name='pollutant']").forEach((radio) => {
+                radio.addEventListener("change", toggleConcentrationInput);
+            });
+
+            function toggleConcentrationInput() {
+                const selectedPollutantId = document.querySelector("input[name='pollutant']:checked")?.value;
+
+                // Disable all inputs
+                document.querySelectorAll("input[id^='concentration_']").forEach(input => {
+                    input.disabled = true;
+                });
+
+                // Enable only the selected one
+                if (selectedPollutantId) {
+                    const selectedInput = document.getElementById(`concentration_${selectedPollutantId}`);
+                    if (selectedInput) {
+                        selectedInput.disabled = false;
+                    }
+                }
+            }
+
             form.addEventListener("submit", async (e) => {
                 e.preventDefault();
 
@@ -125,12 +145,12 @@
                     return;
                 }
 
-                const pollutantId = parseInt(selectedPollutant.value, 10);
-                const concentrationInput = document.getElementById(`concentration_${pollutantId}`);
-                const concentration = parseFloat(concentrationInput.value);
+                const pollutantId = parseInt(selectedPollutant.value);
+                const concentrationField = document.getElementById(`concentration_${pollutantId}`);
+                const concentration = parseFloat(concentrationField?.value);
 
                 if (!concentration || isNaN(concentration)) {
-                    alert("Enter a valid concentration value!");
+                    alert("Please enter a valid concentration.");
                     return;
                 }
 
@@ -147,34 +167,20 @@
                     });
 
                     if (!response.ok) {
-                        throw new Error("Failed to process AQI calculation.");
+                        throw new Error("Failed to calculate AQI");
                     }
 
-                    const result = await response.json();
+                    const data = await response.json();
 
-                    if (result.error) {
-                        resultContainer.innerHTML = `<p class="text-danger">${result.error}</p>`;
-                    } else {
-                        resultContainer.innerHTML = `<p style="color: ${result.color}; font-size: 1.5em;">AQI: ${result.aqi}</p>`;
-                    }
+                    resultContainer.innerHTML = `
+                <div style="padding: 10px; text-align: center; color: white; background-color: ${data.color}; border-radius: 5px; font-size: 1.5em;">
+                  AQI: ${Math.round(data.aqi)}
+                </div>
+              `;
                 } catch (error) {
-                    console.error("Error during AQI calculation", error);
-                    resultContainer.innerHTML = `<p class="text-danger">Error occurred: ${error.message}</p>`;
+                    console.error("Error fetching AQI data", error);
+                    resultContainer.innerHTML = `<div class="text-danger">Error: Unable to process AQI calculation</div>`;
                 }
-            });
-
-            // Enable only the selected input field for valid pollutant
-            form.addEventListener("change", (event) => {
-                const radioButtons = document.querySelectorAll("input[name='pollutant']");
-                radioButtons.forEach((radio) => {
-                    const inputField = document.getElementById(`concentration_${radio.value}`);
-                    if (radio.checked) {
-                        inputField.disabled = false;
-                    } else {
-                        inputField.disabled = true;
-                        inputField.value = ""; // Clear unselected field
-                    }
-                });
             });
         });
     </script>

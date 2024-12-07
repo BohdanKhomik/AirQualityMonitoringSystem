@@ -64,7 +64,7 @@ namespace AQIViewer.Controllers
                 }
             }
 
-            return Json(new { aqi = Math.Round(maxAQI, 2), color = resultColor });
+            return Json(new { aqi = Math.Round(maxAQI), color = resultColor });
         }
 
         public class PollutantConcentrationInput

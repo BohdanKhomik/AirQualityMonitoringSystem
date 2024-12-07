@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\VS solutions\\AQIViewer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\views\\home\\aqicalculator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:views\\home\\aqicalculator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\pollutantlevelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\pollutantlevelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\views\\home\\detailspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:views\\home\\detailspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,52 +34,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PollutantLevelsController.cs",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\PollutantLevelsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PollutantLevelsController.cs",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\PollutantLevelsController.cs",
-              "RelativeToolTip": "Controllers\\PollutantLevelsController.cs",
-              "ViewState": "AQIAAJgAAAAAAAAAAAA+wAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T11:08:20.474Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAiwBAAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T11:06:51.662Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAkwEYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T11:01:40.599Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAEcAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T12:52:03.905Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AQICalculator.cshtml",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Views\\Home\\AQICalculator.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\AQICalculator.cshtml",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\Views\\Home\\AQICalculator.cshtml",
-              "RelativeToolTip": "Views\\Home\\AQICalculator.cshtml",
-              "ViewState": "AQIAAKcAAAAAAAAAAAAAALoAAAAAAAAA",
+              "Title": "About.cshtml",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\About.cshtml",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "Views\\Home\\About.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T18:32:34.561Z",
+              "WhenOpened": "2024-12-07T12:39:28.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DetailsPage.cshtml",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Views\\Home\\DetailsPage.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\DetailsPage.cshtml",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Views\\Home\\DetailsPage.cshtml",
+              "RelativeToolTip": "Views\\Home\\DetailsPage.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAAgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T12:21:58.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T12:21:57.222Z",
               "EditorCaption": ""
             }
           ]

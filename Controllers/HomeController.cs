@@ -43,6 +43,7 @@ namespace AQIViewer.Controllers
 
             double maxAQI = 0;
             string resultColor = "#000";
+            string resultRecommendation = " ";
 
             foreach (var level in pollutantLevels)
             {
@@ -60,23 +61,28 @@ namespace AQIViewer.Controllers
                     {
                         maxAQI = pollutantAQI;
                         resultColor = level.PollutionLevel.Color;
+                        resultRecommendation = level.LevelRecomendation;
                     }
                 }
             }
 
-            return Json(new { aqi = Math.Round(maxAQI), color = resultColor });
+            return Json(new { aqi = Math.Round(maxAQI), color = resultColor, recommendation = resultRecommendation });
+        }
+        public class PollutantConcentrationInput
+        {
+            public int PollutantId { get; set; }
+            public double Concentration { get; set; }
         }
 
-        public class PollutantConcentrationInput
-    {
-        public int PollutantId { get; set; }
-        public double Concentration { get; set; }
-    }
-
-    public IActionResult DetailsPage()
+        public IActionResult DetailsPage()
         {
             return View();
         }
+        public IActionResult AboutPage()
+        {
+            return View("About");
+        }
+
         public IActionResult Privacy()
         {
             return View();
@@ -87,5 +93,8 @@ namespace AQIViewer.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+        
     }
 }

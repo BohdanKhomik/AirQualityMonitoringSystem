@@ -31,6 +31,11 @@
                 <select asp-for="PollutantId" class ="form-control" asp-items="ViewBag.PollutantId"></select>
             </div>
             <div class="form-group">
+                <label asp-for="LevelRecomendation" class="control-label"></label>
+                <input asp-for="LevelRecomendation" class="form-control" />
+                <span asp-validation-for="LevelRecomendation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
@@ -41,6 +46,3 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

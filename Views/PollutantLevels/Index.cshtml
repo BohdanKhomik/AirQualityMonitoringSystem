@@ -24,6 +24,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Pollutant)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LevelRecomendation)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -41,6 +44,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Pollutant.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LevelRecomendation)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

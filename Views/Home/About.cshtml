@@ -1,0 +1,114 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<style>
+    .container-about {
+        max-width: 1200px;
+        margin: 30px auto;
+        font-family: "Roboto", sans-serif;
+        height:85vh;
+    }
+
+
+    table {
+        margin: 20px auto;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    thead th {
+        background-color: #333;
+        color: white;
+    }
+
+    .good {
+        background-color: #00c853;
+        color: white;
+    }
+
+    .moderate {
+        background-color: yellow;
+        color: black;
+    }
+
+    .unhealthy-sensitive {
+        background-color: orange;
+        color: black;
+    }
+
+    .unhealthy {
+        background-color: red;
+        color: white;
+    }
+
+    .very-unhealthy {
+        background-color: purple;
+        color: white;
+    }
+
+    .hazardous {
+        background-color: #7e0023;
+        color: white;
+    }
+</style>
+<div class="container-about">
+
+    <h1 style="text-align: center;">About the Air Quality and Pollution Measurement</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Range</th>
+                <th>Air Pollution Level</th>
+                <th>Health Implications</th>
+                <th>Cautionary Statement (for PM2.5)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="good">
+                <td>0 - 50</td>
+                <td>Good</td>
+                <td>Air quality is considered satisfactory, and air pollution poses little or no risk</td>
+                <td>None</td>
+            </tr>
+            <tr class="moderate">
+                <td>51 - 100</td>
+                <td>Moderate</td>
+                <td>Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</td>
+                <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
+            </tr>
+            <tr class="unhealthy-sensitive">
+                <td>101 - 150</td>
+                <td>Unhealthy for Sensitive Groups</td>
+                <td>Members of sensitive groups may experience health effects. The general public is not likely to be affected.</td>
+                <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
+            </tr>
+            <tr class="unhealthy">
+                <td>151 - 200</td>
+                <td>Unhealthy</td>
+                <td>Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.</td>
+                <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion.</td>
+            </tr>
+            <tr class="very-unhealthy">
+                <td>201 - 300</td>
+                <td>Very Unhealthy</td>
+                <td>Health warnings of emergency conditions. The entire population is more likely to be affected.</td>
+                <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.</td>
+            </tr>
+            <tr class="hazardous">
+                <td>300+</td>
+                <td>Hazardous</td>
+                <td>Health alert: everyone may experience more serious health effects</td>
+                <td>Everyone should avoid all outdoor exertion</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

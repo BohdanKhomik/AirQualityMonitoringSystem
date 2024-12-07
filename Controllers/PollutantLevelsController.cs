@@ -59,7 +59,7 @@ namespace AQIViewer.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,MinConcentration,MaxConcentration,PollutionLevelId,PollutantId")] PollutantLevel pollutantLevel)
+        public async Task<IActionResult> Create([Bind("Id,MinConcentration,MaxConcentration,PollutionLevelId,PollutantId,LevelRecomendation")] PollutantLevel pollutantLevel)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace AQIViewer.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,MinConcentration,MaxConcentration,PollutionLevelId,PollutantId")] PollutantLevel pollutantLevel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,MinConcentration,MaxConcentration,PollutionLevelId,PollutantId,LevelRecomendation")] PollutantLevel pollutantLevel)
         {
             if (id != pollutantLevel.Id)
             {

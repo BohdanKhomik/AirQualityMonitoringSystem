@@ -11,5 +11,7 @@
 
         public int PollutantId { get; set; }
         public Pollutant Pollutant { get; set; } = null!;  // required reference navigation
+
+        public string LevelRecomendation { get; set; }
     } 
 }

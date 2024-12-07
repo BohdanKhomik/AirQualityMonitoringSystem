@@ -1,0 +1,421 @@
+﻿
+@{
+    ViewData["Title"] = "DetailsPage";
+}
+
+<style>
+    .section-main {
+    }
+    body {
+        background: rgb(253, 242, 242);
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .wrapper {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+    }
+
+    .follow {
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+    }
+
+    .section-main {
+        display:flex;
+        justify-content:space-between;
+        gap: 20px;
+    }
+
+    .section-main-aside {
+        width: 25vw;
+        background: red;
+    }
+
+    .map, .other-locations {
+        height: 484px;
+    }
+
+    .section-main-container {
+        width: 70vw;
+        display:flex;
+        flex-direction:column;
+        border:1px solig grey;
+        filter:drop-shadow(0 0 0.75rem lightgrey);
+    }
+
+    .aqi {
+        background:lightgreen;
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        gap:30px;
+    }
+
+    .aqi-level, .aqi-icon {
+        padding: 20px;
+        margin: 30px;
+    }
+
+    .aqi-level {
+        width: 125px;
+        color:white;
+        background:green;
+        text-align:left;
+        opacity:0.66;
+        border-radius:3px;
+    }
+
+    .aqi-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .uppercase {
+        text-transform:uppercase;
+        font-size:14px;
+        letter-spacing:.1rem;
+    }
+
+    .overview {
+        padding:20px;
+        background: white;
+    }
+
+    table {
+        margin:30px 0;
+        width:100%;
+        font-size: 14px;
+        border: 2px solid darkgrey;
+        box-shadow: 2px 2px 3px darkgrey;
+    }
+    
+    th {
+        padding: 15px;
+        background:lightgrey;
+        border: 2px solid darkgrey;
+  
+    }
+    td {
+        padding: 15px;
+        border: 2px solid darkgrey;
+    }
+
+    .bar-table {
+        width: 100%;
+        border:none;
+        border-collapse: collapse;
+    }
+
+    .bar-table th, .bar-table td {
+        text-align: left;
+        padding: 10px;
+    }
+
+    .bar-table th {
+        background-color: #f4f4f4;
+        font-size: 14px;
+    }
+
+    .bar-table td {
+        vertical-align: middle;
+    }
+
+    .bar-table th:nth-child(odd){
+        width:20%;
+    }
+
+    .progress-container {
+        position: relative;
+        height: 8px;
+        width: 100%;
+        background-color: #e8e8e8;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background-color: #8bc34a;
+        border-radius: 4px;
+    }
+
+    .concentration {
+        font-weight: bold;
+    }
+
+    .recomendation-content {
+        display:flex;
+        justify-content:space-between;
+        align-content:center;
+        gap:10%;
+        padding:20px;
+        flex-wrap:wrap;
+
+    }
+    .advice{
+        flex:45%;
+    }
+
+    .section-forecast {
+        width:100%;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .forecast h2 {
+        margin-top: 0;
+        color: #333;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    thead th {
+        background-color: #f8f8f8;
+        color: #555;
+        padding: 10px;
+        text-align: left;
+        border-bottom: 2px solid #ddd;
+    }
+
+    tbody td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .medium {
+        background-color: #ffe58a;
+        color: #333;
+        padding: 5px 10px;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .good {
+        background-color: #a8e6a3;
+        color: #333;
+        padding: 5px 10px;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .highlight {
+        background-color: #f1f8ff;
+    }
+
+    tbody tr:hover {
+        background-color: #f8f8f8;
+    }
+</style>
+
+<div class="wrapper">
+    <div class="second-header">
+        <h1>Air Quality index in Lviv</h1>
+        <p>Air quality index (AQI) and PM2.5 air pollution near Lviv</p>
+        <div class ="follow">
+            <div>Last Update at 08:00, Dec 4(Local time)</div>
+            <div>
+                <p>6 people follows this statin <a href="#">Follow</a></p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="section-main">
+        <div class="section-main-aside">
+            <div class="map fade"></div>
+            <div class="other-locations fade"></div>
+        </div>
+        <div class="section-main-container">
+            <div class="aqi">
+                <div class="aqi-main">
+                    <div class="aqi-level">
+                        <p>US AQI</p>
+                        <p>29</p>
+                    </div>
+                    <div class="aqi-text">
+                        <p class="uppercase">
+                            Live AQI index
+                        </p>
+                        <p>
+                            Good
+                        </p>
+                    </div>
+                </div> 
+                <div class="aqi-icon">
+                    <img  height="80" width="80"/>
+                </div>
+            </div>
+            <div class="overview">
+                <h3 class="uppercase">Overview</h3>
+                <h4>What is the current air quakity near Lviv ?</h4>
+                <table>
+                <tr>
+                    <th>Air pollution level</th>
+                    <th>Air quality index</th>
+                    <th>Main pollutant</th>
+                </tr>
+                <tr>
+                    <td>Good</td>
+                    <td>29 US AQI</td>
+                    <td>PM2.5</td>
+                </tr>
+                </table>
+                <table class="bar-table">
+                    <thead>
+                        <tr>
+                            <th>Pollutants</th>
+                            <th>Pollution Level</th>
+                            <th>Concentration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PM2.5</td>
+                            <td>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 56%;"></div>
+                                </div>
+                            </td>
+                            <td class="concentration">5.6 µg/m³</td>
+                        </tr>
+                        <tr>
+                            <td>PM10</td>
+                            <td>
+                                
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 59%;"></div>
+                                </div>
+                            </td>
+                            <td class="concentration">5.9 µg/m³</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="recomendation">
+                    <h4 class="uppercase">Health Recomendation</h4>
+                    <h3>What is the current air qulity near Lviv</h3>
+                    <div class="recomendation-content">
+                        <div class="advice">
+                            <p>Enjoy outdoor activities</p>
+                        </div>
+                        <div class="advice">
+                            <p>Open your window to bring clean weather</p>
+                        </div>
+                        <div class="advice">
+                            <p>Enjoy outdoor activities</p>
+                        </div>
+                        <div class="advice">
+                            <p>Open your window to bring clean weather</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-forecast">
+                <h2>Air Quality Forecast (AQI)</h2>
+                <p>Location: Universitetska St, 26, Irpin</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Pollution Level</th>
+                            <th>AQI</th>
+                            <th>Weather</th>
+                            <th>Temperature</th>
+                            <th>Wind</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sunday, Dec 1</td>
+                            <td class="medium">Moderate</td>
+                            <td>63 AQI</td>
+                            <td>Cloudy</td>
+                            <td>-2°</td>
+                            <td>7.2 km/h</td>
+                        </tr>
+                        <tr>
+                            <td>Monday, Dec 2</td>
+                            <td class="medium">Moderate</td>
+                            <td>60 AQI</td>
+                            <td>Cloudy</td>
+                            <td>-2°</td>
+                            <td>7.2 km/h</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday, Dec 3</td>
+                            <td class="medium">Moderate</td>
+                            <td>54 AQI</td>
+                            <td>Cloudy</td>
+                            <td>-2°</td>
+                            <td>7.2 km/h</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td>Today</td>
+                            <td class="medium">Moderate</td>
+                            <td>51 AQI</td>
+                            <td>Cloudy</td>
+                            <td>-2°</td>
+                            <td>7.2 km/h</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday, Dec 5</td>
+                            <td class="medium">Moderate</td>
+                            <td>57 AQI</td>
+                            <td>Cloudy</td>
+                            <td>-2°</td>
+                            <td>7.2 km/h</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday, Dec 7</td>
+                            <td class="good">Good</td>
+                            <td>47 AQI</td>
+                            <td>Sunny</td>
+                            <td>3°</td>
+                            <td>18 km/h</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section-news">
+                <h3>News</h3>
+                <p></p>
+                <div class="news-container">
+                    <div class="news">
+                        <img width="340" height="180"/>
+                        <div title-container>
+                            <p>14 days ago</p>
+                            <img src="#" width="10" height="10"/>
+                        </div>
+                        <p class="title">Indoor Quality Alert: Pacific Nothwest Bombs Cyclone</p>
+                    </div>
+                    <div class="news">
+                        <img width="340" height="180" />
+                        <div title-container>
+                            <p>14 days ago</p>
+                            <img src="#" width="10" height="10" />
+                        </div>
+                        <p class="title">Indoor Quality Alert: Pacific Nothwest Bombs Cyclone</p>
+                    </div>
+                    <div class="news">
+                        <img width="340" height="180" />
+                        <div title-container>
+                            <p>14 days ago</p>
+                            <img src="#" width="10" height="10" />
+                        </div>
+                        <p class="title">Indoor Quality Alert: Pacific Nothwest Bombs Cyclone</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

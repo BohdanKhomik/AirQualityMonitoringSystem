@@ -44,6 +44,8 @@ namespace AQIViewer.Data
               .HasForeignKey(pl => pl.PollutantId)
               .IsRequired();
 
+
+
             // Pollutant -> PollutionRecord
             base.OnModelCreating(builder);
             builder.Entity<Pollutant>()

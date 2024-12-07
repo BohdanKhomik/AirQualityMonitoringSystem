@@ -1,0 +1,183 @@
+﻿@model List<AQIViewer.Models.Pollutant>
+
+<style>
+    .container {
+        max-width: 800px;
+        margin: auto;
+        font-family: Arial, sans-serif;
+    }
+
+    .pollutant-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+
+    .pollutant-table th, .pollutant-table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+        color: #343a40;
+    }
+
+    .table th, .table td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    #result p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #007bff;
+    }
+</style>
+<body>
+    <div class="container">
+        <form id="aqiForm">
+            @if (Model == null || !Model.Any())
+            {
+                <p>No pollutant data is available.</p>
+            }
+            else
+            {
+                <div class="container my-5">
+                    <h1 class="text-center mb-4">AQI Calculator</h1>
+                            <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Select</th>
+                        <th>Pollutant</th>
+                        <th>Measure</th>
+                        <th>Description</th>
+                        <th>Enter Concentration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var pollutant in Model)
+                    {
+                        <tr>
+                            <td>
+                                <input type="radio" name="pollutant" value="@pollutant.Id" required>
+                            </td>
+                            <td>@pollutant.Name</td>
+                            <td>@pollutant.Measure</td>
+                            <td>@pollutant.Description</td>
+                            <td>
+                                <input type="number" 
+                                       id="concentration_@pollutant.Id" 
+                                       class="form-control" 
+                                       placeholder="Enter value"
+                                       step="0.01" 
+                                       disabled>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-calculator"></i> Calculate AQICalculate AQI
+                        </button>
+                    </div>
+                    <div id="result" class="mt-4 text-center">
+                        <!-- AQI result will appear here -->
+                    </div>
+                </div>
+            }
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("aqiForm");
+            const resultContainer = document.getElementById("result");
+
+            // Handle button click event
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                const selectedPollutant = document.querySelector("input[name='pollutant']:checked");
+                if (!selectedPollutant) {
+                    alert("Please select a pollutant!");
+                    return;
+                }
+
+                const pollutantId = parseInt(selectedPollutant.value, 10);
+                const concentrationInput = document.getElementById(`concentration_${pollutantId}`);
+                const concentration = parseFloat(concentrationInput.value);
+
+                if (!concentration || isNaN(concentration)) {
+                    alert("Enter a valid concentration value!");
+                    return;
+                }
+
+                try {
+                    const response = await fetch("/Home/CalculateAQI", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            PollutantId: pollutantId,
+                            Concentration: concentration,
+                        }),
+                    });
+
+                    if (!response.ok) {
+                        throw new Error("Failed to process AQI calculation.");
+                    }
+
+                    const result = await response.json();
+
+                    if (result.error) {
+                        resultContainer.innerHTML = `<p class="text-danger">${result.error}</p>`;
+                    } else {
+                        resultContainer.innerHTML = `<p style="color: ${result.color}; font-size: 1.5em;">AQI: ${result.aqi}</p>`;
+                    }
+                } catch (error) {
+                    console.error("Error during AQI calculation", error);
+                    resultContainer.innerHTML = `<p class="text-danger">Error occurred: ${error.message}</p>`;
+                }
+            });
+
+            // Enable only the selected input field for valid pollutant
+            form.addEventListener("change", (event) => {
+                const radioButtons = document.querySelectorAll("input[name='pollutant']");
+                radioButtons.forEach((radio) => {
+                    const inputField = document.getElementById(`concentration_${radio.value}`);
+                    if (radio.checked) {
+                        inputField.disabled = false;
+                    } else {
+                        inputField.disabled = true;
+                        inputField.value = ""; // Clear unselected field
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

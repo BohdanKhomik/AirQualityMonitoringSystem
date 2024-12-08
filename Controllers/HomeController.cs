@@ -18,9 +18,23 @@ namespace AQIViewer.Controllers
             _context = dbContext;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            var points = _context.LocationPoint
+                .Select(lp => new
+                {
+                    lp.Name,
+                    lp.Longtitude,
+                    lp.Latitude,
+                    AQI = lp.AirQualityRecords
+                        .OrderByDescending(r => r.TimeStamp)
+                        .Select(r => r.AQI)
+                        .FirstOrDefault()
+                })
+                .ToList();
+
+            return View(points);
         }
         public IActionResult Calculator()
         {

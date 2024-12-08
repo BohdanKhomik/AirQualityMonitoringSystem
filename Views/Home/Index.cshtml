@@ -1,8 +1,180 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model IEnumerable<dynamic>
+<style>
+    #map {
+        border: 2px solid #ccc;
+        border-radius: 5px;
+    }
 
+    .container-about {
+        border-top: 1px solid lightgrey;
+        max-width: 1200px;
+        margin: 50px auto;
+        padding-top: 30px;
+        font-family: "Roboto", sans-serif;
+        height: 85vh;
+    }
+
+
+    table {
+        margin: 20px auto;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    thead th {
+        background-color: #333;
+        color: white;
+    }
+
+    .good {
+        background-color: #00c853;
+        color: white;
+    }
+
+    .moderate {
+        background-color: yellow;
+        color: black;
+    }
+
+    .unhealthy-sensitive {
+        background-color: orange;
+        color: black;
+    }
+
+    .unhealthy {
+        background-color: red;
+        color: white;
+    }
+
+    .very-unhealthy {
+        background-color: purple;
+        color: white;
+    }
+
+    .hazardous {
+        background-color: #7e0023;
+        color: white;
+    }
+
+    .footer[b-mq58q74bad]{
+        bottom:-150px;
+    }
+
+    .search-bar {
+        margin-bottom: 20px;
+    }
+</style>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to AQI Viewer</h1>
+    <h2>Air Quality index in Ukraine</h2>
 </div>
+<div class="container mt-4">
+    <div class="search-bar text-center mb-3">
+        <input type="text" id="locationSearch" class="form-control d-inline-block" style="width: 300px;" placeholder="Enter location name">
+        <button type="submit" id="findButton" class="btn btn-primary">Find</button>
+    </div>
+</div>
+<div id="map" style="height: 500px;"></div>
+<div class="container-about">
+
+    <h2 style="text-align: center;">About the Air Quality and Pollution Measurement</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Range</th>
+                <th>Air Pollution Level</th>
+                <th>Health Implications</th>
+                <th>Cautionary Statement (for PM2.5)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="good">
+                <td>0 - 50</td>
+                <td>Good</td>
+                <td>Air quality is considered satisfactory, and air pollution poses little or no risk</td>
+                <td>None</td>
+            </tr>
+            <tr class="moderate">
+                <td>51 - 100</td>
+                <td>Moderate</td>
+                <td>Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</td>
+                <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
+            </tr>
+            <tr class="unhealthy-sensitive">
+                <td>101 - 150</td>
+                <td>Unhealthy for Sensitive Groups</td>
+                <td>Members of sensitive groups may experience health effects. The general public is not likely to be affected.</td>
+                <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
+            </tr>
+            <tr class="unhealthy">
+                <td>151 - 200</td>
+                <td>Unhealthy</td>
+                <td>Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.</td>
+                <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion.</td>
+            </tr>
+            <tr class="very-unhealthy">
+                <td>201 - 300</td>
+                <td>Very Unhealthy</td>
+                <td>Health warnings of emergency conditions. The entire population is more likely to be affected.</td>
+                <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.</td>
+            </tr>
+            <tr class="hazardous">
+                <td>300+</td>
+                <td>Hazardous</td>
+                <td>Health alert: everyone may experience more serious health effects</td>
+                <td>Everyone should avoid all outdoor exertion</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const map = L.map('map').setView([50.4501, 30.5234], 6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        const points = @Html.Raw(Json.Serialize(Model));
+
+        const markers = {};
+
+        points.forEach(point => {
+            const marker = L.marker([parseFloat(point.latitude), parseFloat(point.longtitude)]).addTo(map);
+            marker.bindPopup(`
+                <strong>${point.name}</strong><br>
+                AQI: ${point.aqi}
+            `);
+
+            markers[point.name.toLowerCase()] = marker;
+        });
+
+        const findButton = document.getElementById("findButton");
+        const searchInput = document.getElementById("locationSearch");
+
+        findButton.addEventListener("click", () => {
+            const searchValue = searchInput.value.trim().toLowerCase();
+            const marker = markers[searchValue];
+
+            if (marker) {
+                const { lat, lng } = marker.getLatLng();
+                map.setView([lat, lng], 10); // Zoom to the marker
+                marker.openPopup(); // Show the popup
+            } else {
+                alert("Location not found!");
+            }
+        });
+    });
+
+</script>

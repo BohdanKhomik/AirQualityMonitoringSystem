@@ -3,7 +3,7 @@
     public class AirQualityRecord
     {
         public int Id { get; set; }
-        public TimeSpan TimeStamp { get; set; }
+        public DateTime TimeStamp { get; set; }
         public int AQI { get; set; }
 
         public ICollection<PollutionRecord> PollutionRecords { get; } = new List<PollutionRecord>();

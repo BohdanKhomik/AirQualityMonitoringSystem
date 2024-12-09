@@ -37,6 +37,65 @@ namespace AQIViewer.Controllers
 
             return View(points);
         }
+
+
+        [HttpGet]
+        public IActionResult DetailsPage(int id)
+        {
+            // Fetch the main point by ID
+            var mainPoint = _context.LocationPoint
+                .Where(lp => lp.Id == id)
+                .Select(lp => new
+                {
+                    lp.Id,
+                    lp.Name,
+                    lp.Latitude,
+                    lp.Longtitude,
+                    AQI = lp.AirQualityRecords
+                        .OrderByDescending(r => r.TimeStamp)
+                        .Select(r => r.AQI)
+                        .FirstOrDefault()
+                })
+                .FirstOrDefault();
+
+            if (mainPoint == null)
+                return NotFound();
+
+            var points = _context.LocationPoint
+                .Select(lp => new
+                {
+                    lp.Id,
+                    lp.Name,
+                    lp.Longtitude,
+                    lp.Latitude,
+                    AQI = lp.AirQualityRecords
+                        .OrderByDescending(r => r.TimeStamp)
+                        .Select(r => r.AQI)
+                        .FirstOrDefault()
+                })
+                .ToList();
+
+            // Fetch all other points
+            var otherPoints = _context.LocationPoint
+                .Where(lp => lp.Id != id)
+                .Select(lp => new
+                {
+                    lp.Id,
+                    lp.Name,
+                    lp.Latitude,
+                    lp.Longtitude,
+                    AQI = lp.AirQualityRecords
+                        .OrderByDescending(r => r.TimeStamp)
+                        .Select(r => r.AQI)
+                        .FirstOrDefault()
+                })
+                .ToList();
+
+            ViewBag.MainPoint = mainPoint;
+            ViewBag.OtherLocations = otherPoints;
+
+            return View(points);
+        }
         public IActionResult Calculator()
         {
             var pollutants = _context.Pollutant.Include(p => p.PollutantLevels).ToList();
@@ -89,58 +148,6 @@ namespace AQIViewer.Controllers
             public double Concentration { get; set; }
         }
 
-        [HttpGet]
-        public IActionResult DetailsPage(int id)
-        {
-            var mainPoint = _context.LocationPoint
-                .Where(lp => lp.Id == id)
-                .Select(lp => new
-                {
-                    lp.Id,
-                    lp.Name,
-                    lp.Latitude,
-                    lp.Longtitude,
-                    AQI = lp.AirQualityRecords
-                        .OrderByDescending(r => r.TimeStamp)
-                        .Select(r => r.AQI)
-                        .FirstOrDefault(),
-                })
-                .FirstOrDefault();
-
-            if (mainPoint == null)
-                return NotFound();
-
-            // Fetch all points first and process with client-side filtering
-            var allPoints = _context.LocationPoint
-                .Where(lp => lp.Id != id)
-                .AsEnumerable() // Switch to client-side evaluation here
-                .Where(lp => IsWithinRange(mainPoint.Latitude, lp.Latitude) &&
-                              IsWithinRange(mainPoint.Longtitude, lp.Longtitude))
-                .Select(lp => new
-                {
-                    lp.Id,
-                    lp.Name,
-                    lp.Latitude,
-                    lp.Longtitude,
-                    AQI = lp.AirQualityRecords
-                        .OrderByDescending(r => r.TimeStamp)
-                        .Select(r => r.AQI)
-                        .FirstOrDefault()
-                })
-                .ToList();
-
-            return View(new { MainPoint = mainPoint, NearbyLocations = allPoints });
-        }
-
-        // Utility function for range calculation
-        private bool IsWithinRange(string value1, string value2)
-        {
-            if (double.TryParse(value1, out var num1) && double.TryParse(value2, out var num2))
-            {
-                return Math.Abs(num1 - num2) <= 0.5;
-            }
-            return false;
-        }
 
         public IActionResult AboutPage()
         {

@@ -3,37 +3,29 @@
   "WorkspaceRootPath": "D:\\VS solutions\\AQIViewer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\views\\home\\aqicalculator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:views\\home\\aqicalculator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\views\\home\\detailspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:views\\home\\detailspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|d:\\vs solutions\\aqiviewer\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{48D09AFA-1250-4CB5-9CC5-A92E005D5303}|AQIViewer.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedHeight": 200,
           "SelectedChildIndex": 2,
           "Children": [
             {
@@ -42,67 +34,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "About.cshtml",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Views\\Home\\About.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\About.cshtml",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\Views\\Home\\About.cshtml",
-              "RelativeToolTip": "Views\\Home\\About.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFIAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T18:53:31.503Z",
+              "WhenOpened": "2024-12-09T21:09:02.293Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AQICalculator.cshtml",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Views\\Home\\AQICalculator.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\AQICalculator.cshtml",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\Views\\Home\\AQICalculator.cshtml",
-              "RelativeToolTip": "Views\\Home\\AQICalculator.cshtml",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAACcAAAABAAAA",
+              "Title": "DetailsPage.cshtml",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Views\\Home\\DetailsPage.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\DetailsPage.cshtml",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Views\\Home\\DetailsPage.cshtml",
+              "RelativeToolTip": "Views\\Home\\DetailsPage.cshtml",
+              "ViewState": "AQIAAJsBAAAAAAAAAAAAAKUBAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T18:53:30.378Z",
+              "WhenOpened": "2024-12-09T21:04:07.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T18:43:46.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACkAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T18:10:36.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "login.css",
-              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\wwwroot\\css\\login.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\login.css",
-              "ToolTip": "D:\\VS solutions\\AQIViewer\\wwwroot\\css\\login.css",
-              "RelativeToolTip": "wwwroot\\css\\login.css",
-              "ViewState": "AQIAALEAAAAAAAAAAAAAALcAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-09T17:43:59.152Z",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\VS solutions\\AQIViewer\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\VS solutions\\AQIViewer\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAqwFkAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T20:09:27.567Z",
               "EditorCaption": ""
             },
             {
@@ -113,9 +79,9 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\VS solutions\\AQIViewer\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACMAAAAqAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T16:11:02.44Z",
+              "WhenOpened": "2024-12-09T20:05:24.848Z",
               "EditorCaption": ""
             }
           ]

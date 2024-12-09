@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AQIViewer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78138e83910e26b6ca142b3d0861e6f2093d2e51")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2e5b418052f748fd86cd74a7ee55d76e7ac087b")]
 [assembly: System.Reflection.AssemblyProductAttribute("AQIViewer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AQIViewer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

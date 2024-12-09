@@ -1,8 +1,10 @@
 ﻿
 @{
     ViewData["Title"] = "DetailsPage";
+    var mainPoint = ViewBag.MainPoint;
+    var otherLocations = ViewBag.OtherLocations;
 }
-
+@model IEnumerable<dynamic>
 <style>
     body {
         background: rgb(253, 242, 242);
@@ -39,6 +41,7 @@
 
     .map, .other-locations {
         height: 500px;
+        width:100%;
     }
 
     .section-main-container {
@@ -218,32 +221,182 @@
     tbody tr:hover {
         background-color: #f8f8f8;
     }
+
+    .other-locations {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        max-width: 400px;
+        margin-top: 30px;
+    }
+
+    .other-locations h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .other-locations ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .other-locations li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .other-locations li:last-child {
+        border-bottom: none;
+    }
+
+    .other-locations .flag {
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+    .other-locations a {
+        flex-grow: 1;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .other-locations a:hover {
+        text-decoration: underline;
+    }
+
+    .other-locations .aqi-badge {
+        display: inline-block;
+        min-width: 40px;
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 12px;
+        color: #fff;
+    }
+
+    .other-locations .aqi-badge[data-aqi] {
+        background-color: #28a745; /* Default: Green */
+    }
+
+    /* Change color based on AQI value */
+    .other-locations .aqi-badge[data-aqi='50'] {
+        background-color: #ffc107; /* Yellow for moderate AQI */
+    }
+
+    .other-locations .aqi-badge[data-aqi='100'] {
+        background-color: #dc3545; /* Red for unhealthy AQI */
+    }
+
+    .other-locations .aqi-badge[data-aqi='150'] {
+        background-color: red; /* Red for unhealthy AQI */
+    }
+    
+    .other-locations .aqi-badge[data-aqi='200'] {
+        background-color: purple; /* Red for unhealthy AQI */
+    }
+
+    .other-locations .aqi-badge[data-aqi='200'] {
+        background-color: brown; /* Red for unhealthy AQI */
+    }
+    .section-news {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+    }
+
+    .section-news h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .section-news p {
+        font-size: 1rem;
+        color: #666;
+    }
+
+    .news-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .news-card {
+        width: 300px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .news-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .news-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        color: #999;
+    }
+
+    .title-container img {
+        width: 12px;
+        height: 12px;
+        }
+
+    .news-title {
+        padding: 10px 15px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .footer[b-mq58q74bad] {
+        bottom: -50px;
+    }
+
 </style>
 
 <div class="wrapper">
     <div class="second-header">
-        <h1>Air Quality index in Lviv</h1>
-        <p>Air quality index (AQI) and PM2.5 air pollution near Lviv</p>
+        <h1>Air Quality index in @mainPoint.Name</h1>
+        <p>Air quality index (AQI) and PM2.5 air pollution near @mainPoint.Name</p>
         <div class ="follow">
             <div>Last Update at 08:00, Dec 4(Local time)</div>
             <div>
-                <p>6 people follows this statin <a href="#">Follow</a></p>
+                <p>6 people follows this statin <button type="submit" id="findButton" class="btn btn-primary">Follow</button></p>
                 
             </div>
         </div>
     </div>
     <div class="section-main">
         <div class="section-main-aside">
-            <div class="map" id="map"></div>
-            <div class="other-locations fade">
-                <h3>Other Locations Nearby</h3>
+            <div id="map" style="height: 500px;"></div>
+            <div class="other-locations">
+                <h3>Other Locations</h3>
                 <ul>
-                    @foreach (var location in Model.NearbyLocations)
+                    @foreach (var location in otherLocations)
                     {
                         <li>
-                            <a href="@Url.Action("DetailsPage", new { id = location.Id })">
-                                @location.Name - AQI: @location.AQI
+                            <a href="@Url.Action("DetailsPage", "Home", new { id = location.Id })">
+                                @location.Name
                             </a>
+                            <span class="aqi-badge" data-aqi="@location.AQI">@location.AQI</span>
                         </li>
                     }
                 </ul>
@@ -266,12 +419,12 @@
                     </div>
                 </div> 
                 <div class="aqi-icon">
-                    <img  height="80" width="80"/>
+                    <img src="@Url.Content("~/images/icons/face.svg")" height="80" width="80" />
                 </div>
             </div>
             <div class="overview">
                 <h3 class="uppercase">Overview</h3>
-                <h4>What is the current air quakity near Lviv ?</h4>
+                <h4>What is the current air quality near @mainPoint.Name ?</h4>
                 <table>
                 <tr>
                     <th>Air pollution level</th>
@@ -316,7 +469,7 @@
                 </table>
                 <div class="recomendation">
                     <h4 class="uppercase">Health Recomendation</h4>
-                    <h3>What is the current air qulity near Lviv</h3>
+                    <h3>What is the current air qulity near @mainPoint.Name</h3>
                     <div class="recomendation-content">
                         <div class="advice">
                             <p>Enjoy outdoor activities</p>
@@ -401,82 +554,79 @@
             </div>
             <div class="section-news">
                 <h3>News</h3>
-                <p></p>
+                <p>Latest updates on air quality and environmental changes.</p>
                 <div class="news-container">
-                    <div class="news">
-                        <img width="340" height="180"/>
-                        <div title-container>
+                    <div class="news-card">
+                        <img src="@Url.Content("~/images/1.jpeg")" alt="News Image 3" width="200" />
+                        <div class="title-container">
                             <p>14 days ago</p>
-                            <img src="#" width="10" height="10"/>
+                            <img src="icon.png" alt="Icon" />
                         </div>
-                        <p class="title">Indoor Quality Alert: Pacific Nothwest Bombs Cyclone</p>
+                        <p class="news-title">Indoor Quality Alert: Pacific Northwest Bomb Cyclone</p>
                     </div>
-                    <div class="news">
-                        <img width="340" height="180" />
-                        <div title-container>
-                            <p>14 days ago</p>
-                            <img src="#" width="10" height="10" />
+                    <div class="news-card">
+                        <img src="@Url.Content("~/images/1.jpeg")" alt="News Image 3" width="200" />
+                        <div class="title-container">
+                            <p>10 days ago</p>
+                            <img src="icon.png" alt="Icon" />
                         </div>
-                        <p class="title">Indoor Quality Alert: Pacific Nothwest Bombs Cyclone</p>
+                        <p class="news-title">Understanding the Impact of Urban Air Pollution</p>
                     </div>
-                    <div class="news">
-                        <img width="340" height="180" />
-                        <div title-container>
-                            <p>14 days ago</p>
-                            <img src="#" width="10" height="10" />
+                    <div class="news-card">
+                        <img src="@Url.Content("~/images/1.jpeg")" alt="News Image 3" width="200" />
+                        <div class="title-container">
+                            <p>7 days ago</p>
+                            <img src="icon.png" alt="Icon" />
                         </div>
-                        <p class="title">Indoor Quality Alert: Pacific Nothwest Bombs Cyclone</p>
+                        <p class="news-title">The Future of Air Monitoring in Smart Cities</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-@* <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // Initialize the map
-        const map = L.map('map').setView([50.4501, 30.5234], 6); // Example coordinates (Kyiv)
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
 
-        const points = @Html.Raw(Json.Serialize(Model));
-        points.forEach(point => {
-            const marker = L.marker([point.latitude, point.longtitude]).addTo(map);
-            marker.bindPopup(`
-                <strong>${point.name}</strong><br>
-                AQI: ${point.aqi}
-            `);
-        });
-    });
-</script> *@
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const mainPoint = @Html.Raw(Json.Serialize(Model.MainPoint));
-        const nearbyLocations = @Html.Raw(Json.Serialize(Model.NearbyLocations));
+    document.querySelectorAll('.aqi-badge').forEach(badge => {
+        const aqi = parseInt(badge.getAttribute('data-aqi'), 10);
+        if (aqi <= 50) {
+            badge.style.backgroundColor = '#28a745'; // Green
+        } else if (aqi <= 100) {
+            badge.style.backgroundColor = '#ffc107'; // Yellow
+        } else {
+            badge.style.backgroundColor = '#dc3545'; // Red
+        }
+    });
 
-        // Initialize map
-        const map = L.map('map').setView([mainPoint.latitude, mainPoint.longtitude], 12);
+    document.addEventListener("DOMContentLoaded", () => {
+      
+        const map = L.map('map').setView([parseFloat(@mainPoint.Latitude), parseFloat(@mainPoint.Longtitude)], 12);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        // Add marker for the main location
-        const mainMarker = L.marker([mainPoint.latitude, mainPoint.longtitude]).addTo(map);
+        const mainMarker = L.marker([parseFloat(@mainPoint.Latitude), parseFloat(@mainPoint.Longtitude)]).addTo(map);
         mainMarker.bindPopup(`
-                <strong>${mainPoint.name}</strong><br>
-                AQI: ${mainPoint.aqi}<br>
-                Main Pollutant: ${mainPoint.mainPollutant}
+                <strong>${mainPoint.Name}</strong><br>
+                AQI: ${mainPoint.AQI}
             `).openPopup();
 
-        // Add markers for nearby locations
-        nearbyLocations.forEach(location => {
-            const marker = L.marker([location.latitude, location.longtitude]).addTo(map);
+
+        const points = @Html.Raw(Json.Serialize(Model));
+        const markers = {};
+        // Add markers for all points
+        points.forEach(location => {
+            const marker = L.marker([parseFloat(location.Latitude), parseFloat(location.Longtitude)]).addTo(map);
             marker.bindPopup(`
-                    <strong>${location.name}</strong><br>
-                    AQI: ${location.aqi}
-                `);
+                    <strong>${location.Name}</strong><br>
+                    AQI: ${location.AQI}
+                `)
+
+            markers[point.name.toLowerCase()] = marker; 
+            marker.on("dblclick", () => {
+                window.location.href = `/Home/DetailsPage?id=${location.Id}`;
+            });
         });
     });
 </script>

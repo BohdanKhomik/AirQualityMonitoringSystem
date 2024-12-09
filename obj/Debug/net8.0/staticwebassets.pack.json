@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\VS solutions\\AQIViewer\\wwwroot\\images\\1.jpeg",
+      "PackagePath": "staticwebassets\\images\\1.jpeg"
+    },
+    {
+      "Id": "D:\\VS solutions\\AQIViewer\\wwwroot\\images\\icons\\face.svg",
+      "PackagePath": "staticwebassets\\images\\icons\\face.svg"
+    },
+    {
       "Id": "D:\\VS solutions\\AQIViewer\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

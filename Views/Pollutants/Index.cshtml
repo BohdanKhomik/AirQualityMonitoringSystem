@@ -4,11 +4,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Pollutant Management Page</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#addPollutant" onclick="addPollutant()">
+    Add Pollutant
+</button>
+
+<div id="pollutantTable"></div>
+<div id="deleteTable"></div>
+<div id="detailsTable"></div>
+
 <table class="table">
     <thead>
         <tr>
@@ -25,23 +30,61 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Measure)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Measure)
+                </td>
+                <td>
+                    <button type="button" class="btn btn-info" data-toggle="modal"  data-target="#addPollutant" onclick="addPollutant(@item.Id)">
+                            Edit
+                        </button> |
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#pollutantDetails" onclick="projectColumnDetails(@item.Id)">
+                            Details
+                        </button> |
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletePollutant" onclick="deletePollutant(@item.Id)">
+						    Delete
+				    </button>
+                </td>
+            </tr>
+    }
     </tbody>
 </table>
+<script>
+    function addPollutant(id) {
+        $.ajax({
+            type: "Get",
+            url: "/Pollutants/CreateOrEdit" + (id ? "?id=" + id : ""),
+            success: function (result) {
+                $("#pollutantTable").html(result);
+                $("#addPollutant").modal('show');
+            }
+        });
+    }
+    function projectColumnDetails(id) {
+        $.ajax({
+            type: "Get",
+            url: "/Pollutants/Details" + (id ? "?id=" + id : ""),
+            success: function (result) {
+                $("#detailsTable").html(result);
+                $("#pollutantDetails").modal('show');
+            }
+        });
+    }
+    function deletePollutant(id) {
+		$.ajax({
+			type: "Get",
+            url: "/Pollutants/Delete" + (id ? "?id=" + id : ""),
+			success: function (result) {
+				$("#deleteTable").html(result);
+				$("#deletePollutant").modal('show');
+			}
+		});
+	}
+</script>

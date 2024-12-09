@@ -170,8 +170,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50TGV2ZWxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VS solutions/AQIViewer/Views/Pollutants/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50c1xDcmVhdGUuY3NodG1s
+[D:/VS solutions/AQIViewer/Views/Pollutants/CreateOrEditPollutant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50c1xDcmVhdGVPckVkaXRQb2xsdXRhbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/VS solutions/AQIViewer/Views/Pollutants/Delete.cshtml]
@@ -180,10 +180,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/VS solutions/AQIViewer/Views/Pollutants/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50c1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/VS solutions/AQIViewer/Views/Pollutants/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbHV0YW50c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/VS solutions/AQIViewer/Views/Pollutants/Index.cshtml]

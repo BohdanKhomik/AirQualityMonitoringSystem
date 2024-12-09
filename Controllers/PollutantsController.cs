@@ -40,86 +40,63 @@ namespace AQIViewer.Controllers
                 return NotFound();
             }
 
-            return View(pollutant);
+            return PartialView(pollutant);
         }
 
         // GET: Pollutants/Create
-        public IActionResult Create()
+        public async Task<IActionResult> CreateOrEdit(int? id = null)
         {
-            return View();
-        }
 
-        // POST: Pollutants/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,Measure")] Pollutant pollutant)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(pollutant);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(pollutant);
-        }
-
-        // GET: Pollutants/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
+            Pollutant? pollutant = null;
             if (id == null)
             {
-                return NotFound();
+                pollutant = new Pollutant();
             }
-
-            var pollutant = await _context.Pollutant.FindAsync(id);
-            if (pollutant == null)
+            else
             {
-                return NotFound();
+                pollutant = await _context.Pollutant.FindAsync(id);
+                if (pollutant == null)
+                {
+                    return NotFound();
+                }
             }
-            return View(pollutant);
+            return PartialView("CreateOrEditPollutant", pollutant);
         }
 
-        // POST: Pollutants/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Measure")] Pollutant pollutant)
+        public async Task<IActionResult> CreateOrEdit(Pollutant pollutant)
         {
-            if (id != pollutant.Id)
+            if (pollutant.Id == 0)
             {
-                return NotFound();
-            }
+                if (ModelState.IsValid)
+                {
+                    _context.Add(pollutant);
 
-            if (ModelState.IsValid)
+                }
+                else
+                {
+                    return BadRequest("Not valid");
+                }
+            }
+            else
             {
-                try
+                if (ModelState.IsValid)
                 {
                     _context.Update(pollutant);
-                    await _context.SaveChangesAsync();
                 }
-                catch (DbUpdateConcurrencyException)
+                else
                 {
-                    if (!PollutantExists(pollutant.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    return BadRequest("Not valid");
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(pollutant);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index", "Pollutants");
         }
 
-        // GET: Pollutants/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
+            if (id == null|| _context.Pollutant == null)
             {
                 return NotFound();
             }
@@ -130,8 +107,7 @@ namespace AQIViewer.Controllers
             {
                 return NotFound();
             }
-
-            return View(pollutant);
+            return PartialView("Delete", pollutant);
         }
 
         // POST: Pollutants/Delete/5
@@ -148,10 +124,7 @@ namespace AQIViewer.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
-        private bool PollutantExists(int id)
-        {
-            return _context.Pollutant.Any(e => e.Id == id);
-        }
+        
+        
     }
 }

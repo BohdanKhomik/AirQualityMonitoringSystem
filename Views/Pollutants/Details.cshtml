@@ -5,32 +5,54 @@
 }
 
 <h1>Details</h1>
+<div id="pollutantTable"></div>
+<div class="modal fade" role="dialog" tabindex="-1" id="pollutantDetails" aria-labelledby="pollutantDetailsLable" aria-hidden="true">
+    <div class="modal-dialog" modal-lg modal-dialog-scrollable" role="document">
+        <div class="modal-content" style="background-color:#BFD7FF !important;">
+            <div class="modal-header">
+                <h3>Pollutant Details</h3>
+            </div>
+            <div class="modal-body">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Measure)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Measure)
+                </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+@*     <div>
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addPollutant" onclick="addPollutant(@Model?.Id)">
+            Edit
+        </button> |
+        <a asp-action="Index">Back to Management page</a>
+    </div> *@
+</div>
 
-<div>
-    <h4>Pollutant</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Measure)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Measure)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+<script>
+    function addPollutant(id) {
+        $.ajax({
+            type: "Get",
+            url: "/Pollutants/CreateOrEdit" + (id ? "?id=" + id : ""),
+            success: function (result) {
+                $("#pollutantTable").html(result);
+                $("#addPollutant").modal('show');
+            }
+        });
+    }
+</script>
+

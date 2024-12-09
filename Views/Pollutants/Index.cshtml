@@ -6,9 +6,6 @@
 
 <h1>Pollutant Management Page</h1>
 
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#addPollutant" onclick="addPollutant()">
-    Add Pollutant
-</button>
 
 <div id="pollutantTable"></div>
 <div id="deleteTable"></div>
@@ -31,30 +28,42 @@
     </thead>
     <tbody>
     @foreach (var item in Model) {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Measure)
-                </td>
-                <td>
-                    <button type="button" class="btn btn-info" data-toggle="modal"  data-target="#addPollutant" onclick="addPollutant(@item.Id)">
-                            Edit
-                        </button> |
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#pollutantDetails" onclick="projectColumnDetails(@item.Id)">
-                            Details
-                        </button> |
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletePollutant" onclick="deletePollutant(@item.Id)">
-						    Delete
-				    </button>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Measure)
+            </td>
+            <td>
+                <button type="button"  data-toggle="modal"  data-target="#addPollutant" onclick="addPollutant(@item.Id)">
+                        Edit
+                    </button> |
+                <button type="button"  data-toggle="modal" data-target="#pollutantDetails" onclick="projectColumnDetails(@item.Id)">
+                        Details
+                    </button> |
+                <button type="button" data-toggle="modal" data-target="#deletePollutant" onclick="deletePollutant(@item.Id)">
+						Delete
+				</button>
+            </td>
+        </tr>
     }
     </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">
+
+            </td>
+            <td>
+                <button type="button" data-toggle="modal" data-target="#addPollutant" onclick="addPollutant()">
+                    Add Pollutant
+                </button>
+            </td>
+        </tr>
+    </tfoot>
 </table>
 <script>
     function addPollutant(id) {

@@ -1,0 +1,59 @@
+﻿/* Modal Content Styling */
+.modal-content {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 20px;
+    font-size: 16px;
+}
+
+.modal-footer {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #333;
+}
+
+.btn-link-danger {
+    background: none;
+    border: none;
+    color: #d9534f;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+    .btn-link-danger:hover {
+        text-decoration: underline;
+    }

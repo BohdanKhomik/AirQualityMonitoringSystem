@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QM2bp7y2EInarKfouE6tl4TzVaLmsnknaKAGemik6XU=",
+  "Hash": "EoU/wfi7JGS0wqA9xqhKhjfxBTGvdfpfgYwELm7gV1E=",
   "Source": "AQIViewer",
   "BasePath": "_content/AQIViewer",
   "Mode": "Default",
@@ -1195,6 +1195,25 @@
       "OriginalItemSpec": "D:\\VS solutions\\AQIViewer\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AQIViewer.bundle.scp.css"
     },
     {
+      "Identity": "D:\\VS solutions\\AQIViewer\\wwwroot\\css\\modal-windows.css",
+      "SourceId": "AQIViewer",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VS solutions\\AQIViewer\\wwwroot\\",
+      "BasePath": "_content/AQIViewer",
+      "RelativePath": "css/modal-windows.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\modal-windows.css"
+    },
+    {
       "Identity": "D:\\VS solutions\\AQIViewer\\wwwroot\\css\\site.css",
       "SourceId": "AQIViewer",
       "SourceType": "Discovered",
@@ -1212,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\VS solutions\\AQIViewer\\wwwroot\\css\\tables.css",
+      "SourceId": "AQIViewer",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VS solutions\\AQIViewer\\wwwroot\\",
+      "BasePath": "_content/AQIViewer",
+      "RelativePath": "css/tables.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\tables.css"
     },
     {
       "Identity": "D:\\VS solutions\\AQIViewer\\wwwroot\\favicon.ico",

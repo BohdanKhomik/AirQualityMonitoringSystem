@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\AQIViewer.bundle.scp.css"
     },
     {
+      "Id": "D:\\VS solutions\\AQIViewer\\wwwroot\\css\\modal-windows.css",
+      "PackagePath": "staticwebassets\\css\\modal-windows.css"
+    },
+    {
       "Id": "D:\\VS solutions\\AQIViewer\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\VS solutions\\AQIViewer\\wwwroot\\css\\tables.css",
+      "PackagePath": "staticwebassets\\css\\tables.css"
     },
     {
       "Id": "D:\\VS solutions\\AQIViewer\\wwwroot\\favicon.ico",

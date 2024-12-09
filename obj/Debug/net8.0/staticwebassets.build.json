@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EoU/wfi7JGS0wqA9xqhKhjfxBTGvdfpfgYwELm7gV1E=",
+  "Hash": "pY8Yl1LcqjkFLmAaQJ/XIiBDae1UbsxY4JRXL4yu9Mw=",
   "Source": "AQIViewer",
   "BasePath": "_content/AQIViewer",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\VS solutions\\AQIViewer\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AQIViewer.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\VS solutions\\AQIViewer\\wwwroot\\css\\login.css",
+      "SourceId": "AQIViewer",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VS solutions\\AQIViewer\\wwwroot\\",
+      "BasePath": "_content/AQIViewer",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "D:\\VS solutions\\AQIViewer\\wwwroot\\css\\modal-windows.css",

@@ -18,5 +18,9 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: rgb(253, 242, 242);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }

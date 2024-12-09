@@ -4,8 +4,22 @@
 @{
 }
 <style>
-    .container-about {
+    body {
+        background: rgb(253, 242, 242);
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .wrapper {
+        margin:0 auto;
         max-width: 1200px;
+        padding:20px;
+        border-left: 2px solid lightgrey;
+        border-right: 2px solid lightgrey;
+        filter: drop-shadow(0 0 0.75rem lightgrey);
+    }
+    .container-about {
+        width:100%;
         margin: 30px auto;
         font-family: "Roboto", sans-serif;
         height:85vh;
@@ -34,7 +48,7 @@
         color: white;
     }
 
-    .moderate {
+    #moderate {
         background-color: yellow;
         color: black;
     }
@@ -44,7 +58,7 @@
         color: black;
     }
 
-    .unhealthy {
+    #unhealthy {
         background-color: red;
         color: white;
     }
@@ -54,14 +68,35 @@
         color: white;
     }
 
-    .hazardous {
+    #hazardous {
         background-color: #7e0023;
         color: white;
     }
-</style>
-<div class="container-about">
 
-    <h1 style="text-align: center;">About the Air Quality and Pollution Measurement</h1>
+    .footer[b-mq58q74bad] {
+        bottom: -150px;
+    }
+</style>
+
+<div class="wrapper">
+    <h1>What is the Air Quality Index (AQI)?</h1>
+
+    <section class="intro-section">
+    <p>
+        The Air Quality Index (AQI) is a numerical scale that measures the quality of the air in your area.
+            It provides information on air pollution levels and their effects on health. Lorem 1 ipsum dolor sit amet consectetur adipisicing elit. Ea eligendi, officia facilis ad fugit vitae provident quam fuga temporibus atque. Dolorem est culpa eius atque magnam itaque hic pariatur? Sed nesciunt repellendus cupiditate corporis doloremque, obcaecati repellat ullam, voluptate deleniti veniam eaque officiis explicabo numquam vitae ducimus! Accusamus sint, quos distinctio sunt aperiam assumenda ducimus exercitationem vitae ipsam ipsum praesentium explicabo, vel repudiandae et tempora doloribus dicta libero quisquam non commodi dolor nulla tempore mollitia. Amet laudantium debitis ea ex ab quaerat provident minus officia. Asperiores rerum doloribus ipsa corrupti voluptates, quasi nulla veritatis fugit suscipit, aliquam sapiente natus obcaecati.
+    </p>
+    </section>
+    <section class="education-section">
+    <h2>How AQI Affects Health</h2>
+    <p>
+            Long-term exposure to air pollution, particularly fine particles (PM2.5), can lead to respiratory diseases, cardiovascular diseases, and other serious health risks. Lorem 1 ipsum dolor sit amet consectetur adipisicing elit. Ea eligendi, officia facilis ad fugit vitae provident quam fuga temporibus atque. Dolorem est culpa eius atque magnam itaque hic pariatur? Sed nesciunt repellendus cupiditate corporis doloremque, obcaecati repellat ullam, voluptate deleniti veniam eaque officiis explicabo numquam vitae ducimus! Accusamus sint, quos distinctio sunt aperiam assumenda ducimus exercitationem vitae ipsam ipsum praesentium explicabo, vel repudiandae et tempora doloribus dicta libero quisquam non commodi dolor nulla tempore mollitia. Amet laudantium debitis ea ex ab quaerat provident minus officia. Asperiores rerum doloribus ipsa corrupti voluptates, quasi nulla veritatis fugit suscipit, aliquam sapiente natus obcaecati.
+    </p>
+    </section>
+
+    <section class="container-about">
+
+    <h2 style="text-align: center;">About the Air Quality and Pollution Measurement</h2>
 
     <table>
         <thead>
@@ -79,7 +114,7 @@
                 <td>Air quality is considered satisfactory, and air pollution poses little or no risk</td>
                 <td>None</td>
             </tr>
-            <tr class="moderate">
+            <tr id="moderate">
                 <td>51 - 100</td>
                 <td>Moderate</td>
                 <td>Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</td>
@@ -91,7 +126,7 @@
                 <td>Members of sensitive groups may experience health effects. The general public is not likely to be affected.</td>
                 <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
             </tr>
-            <tr class="unhealthy">
+            <tr id="unhealthy">
                 <td>151 - 200</td>
                 <td>Unhealthy</td>
                 <td>Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.</td>
@@ -103,7 +138,7 @@
                 <td>Health warnings of emergency conditions. The entire population is more likely to be affected.</td>
                 <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.</td>
             </tr>
-            <tr class="hazardous">
+            <tr id="hazardous">
                 <td>300+</td>
                 <td>Hazardous</td>
                 <td>Health alert: everyone may experience more serious health effects</td>
@@ -111,4 +146,5 @@
             </tr>
         </tbody>
     </table>
+    </section>
 </div>

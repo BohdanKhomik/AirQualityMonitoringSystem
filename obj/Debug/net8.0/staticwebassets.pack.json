@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\AQIViewer.bundle.scp.css"
     },
     {
+      "Id": "D:\\VS solutions\\AQIViewer\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "D:\\VS solutions\\AQIViewer\\wwwroot\\css\\modal-windows.css",
       "PackagePath": "staticwebassets\\css\\modal-windows.css"
     },

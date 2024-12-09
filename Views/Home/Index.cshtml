@@ -65,9 +65,9 @@
         color: white;
     }
 
-    .footer[b-mq58q74bad]{
-        bottom:-150px;
-    }
+/*     .footer[b-mq58q74bad]{
+        bottom:-50px;
+    } */
 
     .search-bar {
         margin-bottom: 20px;
@@ -94,7 +94,7 @@
                 <th>Range</th>
                 <th>Air Pollution Level</th>
                 <th>Health Implications</th>
-                <th>Cautionary Statement (for PM2.5)</th>
+                <th>Cautionary Statement</th>
             </tr>
         </thead>
         <tbody>
@@ -129,7 +129,7 @@
                 <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.</td>
             </tr>
             <tr class="hazardous">
-                <td>300+</td>
+                <td>301+</td>
                 <td>Hazardous</td>
                 <td>Health alert: everyone may experience more serious health effects</td>
                 <td>Everyone should avoid all outdoor exertion</td>
@@ -158,6 +158,10 @@
             `);
 
             markers[point.name.toLowerCase()] = marker;
+
+                    marker.on("dblclick", () => {
+            window.location.href = `/Home/DetailsPage?id=${point.id}`;
+        });
         });
 
         const findButton = document.getElementById("findButton");

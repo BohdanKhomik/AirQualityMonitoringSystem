@@ -31,11 +31,10 @@
 
     .section-main-aside {
         width: 25vw;
-        background: red;
     }
 
     .map, .other-locations {
-        height: 484px;
+        height: 500px;
     }
 
     .section-main-container {
@@ -231,8 +230,20 @@
     </div>
     <div class="section-main">
         <div class="section-main-aside">
-            <div class="map fade"></div>
-            <div class="other-locations fade"></div>
+            <div class="map" id="map"></div>
+            <div class="other-locations fade">
+                <h3>Other Locations Nearby</h3>
+                <ul>
+                    @foreach (var location in Model.NearbyLocations)
+                    {
+                        <li>
+                            <a href="@Url.Action("DetailsPage", new { id = location.Id })">
+                                @location.Name - AQI: @location.AQI
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
         </div>
         <div class="section-main-container">
             <div class="aqi">
@@ -417,3 +428,51 @@
         </div>
     </div>
 </div>
+@* <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Initialize the map
+        const map = L.map('map').setView([50.4501, 30.5234], 6); // Example coordinates (Kyiv)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        const points = @Html.Raw(Json.Serialize(Model));
+        points.forEach(point => {
+            const marker = L.marker([point.latitude, point.longtitude]).addTo(map);
+            marker.bindPopup(`
+                <strong>${point.name}</strong><br>
+                AQI: ${point.aqi}
+            `);
+        });
+    });
+</script> *@
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const mainPoint = @Html.Raw(Json.Serialize(Model.MainPoint));
+        const nearbyLocations = @Html.Raw(Json.Serialize(Model.NearbyLocations));
+
+        // Initialize map
+        const map = L.map('map').setView([mainPoint.latitude, mainPoint.longtitude], 12);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Add marker for the main location
+        const mainMarker = L.marker([mainPoint.latitude, mainPoint.longtitude]).addTo(map);
+        mainMarker.bindPopup(`
+                <strong>${mainPoint.name}</strong><br>
+                AQI: ${mainPoint.aqi}<br>
+                Main Pollutant: ${mainPoint.mainPollutant}
+            `).openPopup();
+
+        // Add markers for nearby locations
+        nearbyLocations.forEach(location => {
+            const marker = L.marker([location.latitude, location.longtitude]).addTo(map);
+            marker.bindPopup(`
+                    <strong>${location.name}</strong><br>
+                    AQI: ${location.aqi}
+                `);
+        });
+    });
+</script>

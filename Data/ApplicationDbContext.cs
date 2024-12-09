@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AQIViewer.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<User>
     {
 
         public DbSet<AirQualityRecord> AirQualityRecords { get; set; }

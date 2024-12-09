@@ -1,73 +1,198 @@
-﻿/* General Reset */
+﻿/* General Body Reset */
 body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    /*color: #ffffff;*/
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f8f8;
 }
 
-/* Containers */
-.login-container,
-.register-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Container for Login Section */
+.login-container {
+    max-width: 900px;
+    margin: 5% auto;
+    padding: 20px;
+/*    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);*/
+    border-radius: 10px;
+/*    background: #1e1e1e;*/
+    color: #fff;
 }
 
-.login-box,
-.register-box {
-    background: #fff;
-    border: 1px solid #333;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px 30px;
-    width: 100%;
-    max-width: 400px;
+/* Page Title */
+.login-title {
+    color:black;
     text-align: center;
-}
-
-/* Titles */
-.form-title {
-    color: #000;
-    font-size: 20px;
-    font-weight: bold;
     margin-bottom: 15px;
+    font-size: 2em;
 }
 
-/* Form Group */
+/* Login Form Section */
+.login-form-section {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #252525;
+}
+
+/* Login Form Headings */
+.login-heading {
+    font-size: 1.4em;
+    color: #eeeeee;
+}
+
+/* Input Fields */
 .form-group {
     margin: 10px 0;
 }
 
-    .form-group label {
-        font-size: 14px;
-        margin-bottom: 5px;
-        display: block;
-        color: #333;
+.form-control {
+    background-color: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+    .form-control:focus {
+        border-color: #888;
     }
 
-    .form-group input.form-control {
-        width: 100%;
+/* Buttons styled as links */
+.btn-login {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin: 10px 0;
+}
+
+    .btn-login:hover {
+        background-color: #777;
+    }
+
+/* Links Style */
+.additional-links a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+    .additional-links a:hover {
+        color: #ffffff;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
         padding: 10px;
-        font-size: 14px;
-        border: 1px solid #333;
-        border-radius: 4px;
-        outline: none;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+}
+
+/* General Body Reset */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container for the Register Page */
+.register-container {
+    max-width: 900px;
+    margin: 5% auto;
+    padding: 20px;
+    /*box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);*/
+    border-radius: 10px;
+    /*background: #1e1e1e;*/
+    color: #fff;
+}
+
+/* Page Title */
+.register-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: black;
+}
+
+/* Section for the Register Form */
+.register-form-section {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #252525;
+}
+
+/* Heading */
+.register-heading {
+    font-size: 1.4em;
+    color: #eeeeee;
+}
+
+/* Input Fields */
+.form-group {
+    margin: 10px 0;
+}
+
+.form-control {
+    background-color: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+    .form-control:focus {
+        border-color: #888;
     }
 
 /* Buttons */
-.btn-primary {
-    background-color: #000;
+.btn-register {
+    background-color: #555;
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    border: 2px solid #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.3s ease;
+    width: 100%;
 }
 
-    .btn-primary:hover {
-        background-color: #333;
+    .btn-register:hover {
+        background-color: #777;
     }
+#registerSubmit, #login-submit{
+    border:2px solid white;
+    margin-top:20px;
+    color: white;
+}
+#registerSubmit:hover, #login-submit:hover {
+    border: 2px solid black;
+    background:white;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-container {
+        padding: 10px;
+    }
+
+    .btn-register,
+    .btn-external {
+        width: 100%;
+    }
+}

@@ -3,6 +3,11 @@
 @{
     ViewData["Title"] = "Register";
 }
+<style>
+    .footer[b-mq58q74bad] {
+        bottom: -250px;
+    }
+</style>
 
 <div class="container register-container">
     <h1 class="register-title">@ViewData["Title"]</h1>
@@ -44,7 +49,6 @@
 
                     <!-- External Login Section -->
                     <div class="external-links">
-                        <h3>Use another service to register.</h3>
                         <hr />
                         @{
                             if ((Model.ExternalLogins?.Count ?? 0) == 0)
